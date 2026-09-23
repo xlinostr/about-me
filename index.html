@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lino C. Ongngog — Licensed Geodetic Engineer | Professional Land Surveyor | GIS Specialist</title>
+<meta name="description" content="Lino C. Ongngog — Licensed Geodetic Engineer and Professional Land Surveyor with 14 years of surveying experience and 5 years of GIS specialization in the Philippines.">
+<meta name="robots" content="index, follow">
+<meta name="color-scheme" content="light">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<meta property="og:image" content="https://linveyor.github.io/about-me/profile-photo.jpg">
+<meta name="twitter:image" content="https://linveyor.github.io/about-me/profile-photo.jpg">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Lino C. Ongngog — Licensed Geodetic Engineer | Professional Land Surveyor | GIS Specialist">
+<meta property="og:description" content="Licensed Geodetic Engineer and Professional Land Surveyor with 14 years of surveying experience and 5 years of GIS specialization in the Philippines.">
+<meta property="og:site_name" content="Lino C. Ongngog — Portfolio">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lino C. Ongngog — Licensed Geodetic Engineer | Professional Land Surveyor | GIS Specialist">
+<meta name="twitter:description" content="Licensed Geodetic Engineer and Professional Land Surveyor with 14 years of surveying experience and 5 years of GIS specialization in the Philippines.">
+
+<style>
+  :root{
+    --navy-900:#0F1B2D;
+    --navy-800:#1B2A41;
+    --navy-700:#263140;
+    --slate-500:#5C6B7A;
+    --paper:#F7F5F0;
+    --paper-dim:#EFEBE2;
+    --paper-cool:#E7EBF1;
+    --gold:#C9A227;
+    --gold-bright:#E4C158;
+    --line:#D9D2C0;
+    --white:#FFFFFF;
+
+        --font-serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', 'Noto Serif', serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--paper);
+    color:var(--navy-700);
+    font-family:var(--font-sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
+  }
+
+  a{ color:inherit; }
+  :focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+
+  .skip-link{
+    position:absolute; left:-9999px; top:0; z-index:100;
+    background:var(--gold); color:var(--navy-900); padding:10px 18px;
+    font-family:var(--font-mono); font-size:0.85rem; text-decoration:none;
+  }
+  .skip-link:focus{ left:12px; top:12px; }
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:0.72rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:500;
+  }
+
+  h1,h2,h3{ font-family:var(--font-serif); font-weight:600; color:var(--navy-800); }
+
+    .topbar{
+    position:sticky; top:0; z-index:50;
+    background:rgba(15,27,45,0.96);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(201,162,39,0.25);
+  }
+    #credentials, #experience, #education, #contact{
+    scroll-margin-top:76px;
+  }
+  .topbar-inner{
+    max-width:1180px; margin:0 auto; padding:14px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px;
+  }
+  .topbar-tagline{
+    font-family:var(--font-serif); font-style:italic; font-weight:500;
+    font-size:0.92rem; color:var(--gold-bright); letter-spacing:0.01em;
+    white-space:nowrap; flex-shrink:0;
+  }
+  .topbar-nav{ display:flex; gap:26px; }
+  .topbar-nav a{
+    color:#C7CDD6; text-decoration:none; font-size:0.85rem; font-weight:500;
+    letter-spacing:0.02em; transition:color 0.2s ease;
+  }
+  .topbar-nav a:hover{ color:var(--gold-bright); }
+  .topbar-cta{
+    font-family:var(--font-mono); font-size:0.75rem; color:var(--navy-900);
+    background:var(--gold); padding:8px 16px; border-radius:2px; text-decoration:none;
+    font-weight:600; letter-spacing:0.03em; white-space:nowrap; flex-shrink:0;
+    transition:background 0.2s ease;
+  }
+  .topbar-cta:hover{ background:var(--gold-bright); }
+  @media (max-width:800px){ .topbar-nav{ display:none; } }
+  @media (max-width:480px){
+    .topbar-inner{ padding:12px 18px; }
+    .topbar-tagline{ font-size:0.76rem; }
+    .topbar-cta{ font-size:0.68rem; padding:7px 12px; }
+    #credentials, #skills, #experience, #education, #contact{ scroll-margin-top:60px; }
+  }
+
+    .hero{
+    position:relative;
+    background:linear-gradient(160deg, var(--navy-900) 0%, var(--navy-800) 62%, #223350 100%);
+    color:var(--white);
+    overflow:hidden;
+    padding:88px 32px 96px;
+  }
+  .hero::before{
+        content:"";
+    position:absolute; inset:0;
+    opacity:0.16;
+    background-image:
+      repeating-radial-gradient(circle at 82% 25%, transparent 0, transparent 34px, rgba(201,162,39,0.55) 35px, transparent 36px, transparent 74px),
+      repeating-radial-gradient(circle at 82% 25%, transparent 0, transparent 108px, rgba(201,162,39,0.35) 109px, transparent 110px);
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative; max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:auto 1fr; gap:56px; align-items:center;
+  }
+  .hero-photo-wrap{ position:relative; width:216px; }
+  .badge-ring{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:272px; height:272px; pointer-events:none; z-index:0;
+    animation:badgeSpin 48s linear infinite;
+  }
+  @keyframes badgeSpin{ to{ transform:translate(-50%,-50%) rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce){ .badge-ring{ animation:none; } }
+  .badge-ring-circle{ fill:none; stroke:rgba(201,162,39,0.35); stroke-width:1; }
+  .badge-ring-text{ fill:var(--gold-bright); }
+  .hero-photo{
+    position:relative; z-index:1;
+    width:216px; height:216px; border-radius:50%; object-fit:cover;
+    border:3px solid var(--gold);
+    box-shadow:0 0 0 8px rgba(201,162,39,0.12), 0 20px 40px rgba(0,0,0,0.35);
+  }
+  .hero-text .eyebrow{ margin-bottom:14px; display:block; }
+  .hero-text h1{
+    font-size:clamp(2.2rem, 4.4vw, 3.4rem);
+    line-height:1.08;
+    color:var(--white);
+    margin-bottom:6px;
+  }
+  .hero-title{
+    font-family:var(--font-mono);
+    font-size:0.74rem;
+    color:var(--gold-bright);
+    margin-bottom:22px;
+    letter-spacing:-0.01em;
+    display:flex; flex-wrap:wrap; align-items:center; gap:4px 8px;
+  }
+  .hero-title .sep{ color:var(--gold); opacity:0.55; }
+  .hero-summary{
+    max-width:640px; color:#D6DCE4; font-size:1.02rem; font-weight:300; line-height:1.75;
+    margin-bottom:28px; text-align:justify; text-justify:inter-word;
+  }
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap:22px 32px;
+  }
+  .hero-meta-item{ display:flex; flex-direction:column; gap:2px; }
+  .hero-meta-item .k{
+    font-family:var(--font-mono); font-size:0.66rem; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--gold);
+  }
+  .hero-meta-item .v{ font-size:0.9rem; color:var(--white); font-weight:500; }
+  .hero-meta-item .v a{ text-decoration:none; }
+  .hero-meta-item .v a:hover{ color:var(--gold-bright); }
+
+  @media (max-width:760px){
+    .hero{ padding:56px 24px 64px; }
+    .hero-inner{ grid-template-columns:1fr; text-align:center; gap:36px; }
+    .hero-photo-wrap{ margin:0 auto; }
+    .hero-meta{ justify-content:center; }
+    .hero-title{ justify-content:center; }
+    .hero-summary{ margin-left:auto; margin-right:auto; }
+  }
+  @media (max-width:480px){
+    .hero{ padding:44px 18px 52px; }
+    .hero-photo, .hero-photo-wrap{ width:164px; height:164px; }
+    .hero-photo{ width:164px; height:164px; }
+    .badge-ring{ width:208px; height:208px; }
+    .hero-text .eyebrow{ font-size:0.66rem; }
+    .hero-summary{ font-size:0.94rem; }
+    .hero-meta{ gap:16px 24px; justify-content:center; }
+  }
+
+    section{ max-width:1180px; margin:0 auto; padding:76px 32px; }
+  .section-head{ margin-bottom:40px; max-width:680px; }
+  .section-head .eyebrow{ margin-bottom:10px; }
+  .section-head h2{ font-size:clamp(1.5rem,2.6vw,2rem); }
+  .divider{ height:1px; background:var(--line); max-width:1180px; margin:0 auto; }
+
+  @media (max-width:760px){
+    section{ padding:52px 20px; }
+    .section-head{ margin-bottom:30px; }
+  }
+  @media (max-width:480px){
+    section{ padding:44px 16px; }
+  }
+
+    .timeline{ position:relative; }
+  .timeline::before{
+    content:""; position:absolute; left:104px; top:8px; bottom:8px; width:1px;
+    background:var(--line);
+  }
+  @media (max-width:700px){ .timeline::before{ left:7px; } }
+
+  .job{
+    display:grid; grid-template-columns:104px 1fr; gap:0 32px;
+    position:relative; padding-bottom:52px;
+  }
+  .job:last-child{ padding-bottom:0; }
+  .job-years{
+    font-family:var(--font-mono); font-size:0.78rem; color:var(--slate-500);
+    padding-top:4px; text-align:right; position:relative; white-space:nowrap;
+  }
+  .job-years::after{
+    content:""; position:absolute; right:-37px; top:8px; width:11px; height:11px;
+    background:var(--paper); border:2px solid var(--gold); border-radius:50%;
+  }
+  @media (max-width:700px){
+    .job{ grid-template-columns:1fr; padding-left:26px; padding-bottom:36px; }
+    .job-years{ text-align:left; padding-top:0; margin-bottom:8px; }
+    .job-years::after{ left:-19px; right:auto; top:2px; }
+  }
+
+  .job-card{
+    background:var(--white); border:1px solid var(--line); border-radius:6px;
+    padding:26px 30px;
+  }
+  @media (max-width:480px){
+    .job-card{ padding:20px 18px; }
+    .job-title{ font-size:1.02rem; line-height:1.3rem; }
+    .job-level{ line-height:1.3rem; }
+    .job-org{ line-height:1.3rem; }
+    .job-loc{ line-height:1.3rem; }
+    .job-list li{ font-size:0.88rem; }
+  }
+  .job-role-row{ display:flex; flex-wrap:wrap; align-items:baseline; gap:7px; margin-bottom:6px; }
+  .job-title{ font-family:var(--font-serif); font-weight:600; font-size:1.15rem; line-height:1.4rem; color:var(--navy-800); }
+  .job-level{
+    font-size:0.85rem; line-height:1.4rem; color:var(--slate-500); font-style:italic; font-weight:400;
+  }
+  .job-org{
+    font-family:var(--font-mono); font-size:0.78rem; line-height:1.4rem; letter-spacing:0.04em;
+    color:var(--gold); text-transform:uppercase; margin-top:0; margin-bottom:6px; font-weight:600;
+  }
+  .job-loc{ font-size:0.85rem; line-height:1.4rem; color:var(--slate-500); margin-top:0; margin-bottom:20px; }
+
+    .job-highlights{ margin-bottom:16px; }
+  .job-highlights .hl-label{
+    font-family:var(--font-mono); font-size:0.65rem;
+    letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);
+    display:block; margin-bottom:8px; font-weight:700;
+  }
+  .hl-tags{ display:flex; flex-wrap:wrap; gap:8px; }
+  .hl-tag{
+    font-size:0.76rem; color:var(--navy-700); background:var(--paper-dim);
+    border:1px solid var(--line); border-radius:20px; padding:5px 13px;
+    line-height:1.3; white-space:nowrap;
+  }
+
+  .job-list{ list-style:none; display:flex; flex-direction:column; gap:9px; }
+  .job-list li{
+    position:relative; padding-left:18px; font-size:0.94rem; color:var(--navy-700);
+    line-height:1.6; text-align:justify; text-justify:inter-word;
+  }
+  .job-list li::before{
+    content:"▸"; position:absolute; left:0; color:var(--gold); font-size:0.8rem; top:2px;
+  }
+
+  @media (max-width:480px){
+    .hl-tag{ font-size:0.72rem; padding:4px 11px; white-space:normal; }
+  }
+  @media print{
+    .hl-tag{ font-size:0.68rem; padding:3px 9px; }
+  }
+
+    .credentials{ background:var(--paper-cool); }
+  .cred-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:16px;
+  }
+  .cred-card{
+    background:var(--white); border:1px solid var(--line); border-top:3px solid var(--navy-800);
+    border-radius:6px; padding:22px 26px;
+  }
+  @media (max-width:700px){
+    .cred-grid{ grid-template-columns:1fr; }
+  }
+  @media (max-width:480px){ .cred-card{ padding:18px 18px; } }
+  .cred-card h3{
+    color:var(--gold); font-family:var(--font-mono); font-size:0.74rem;
+    letter-spacing:0.1em; text-transform:uppercase; font-weight:600; margin-bottom:10px;
+  }
+  .cred-card ul{ list-style:none; display:flex; flex-direction:column; gap:6px; }
+  .cred-card li{
+    font-size:0.84rem; color:var(--navy-700); line-height:1.45; padding-left:14px; position:relative;
+  }
+  .cred-card li::before{
+    content:""; position:absolute; left:0; top:7px; width:5px; height:5px;
+    background:var(--gold); border-radius:50%;
+  }
+  @media (max-width:480px){ .cred-card li{ font-size:0.8rem; } }
+  #certifications .cred-card ul{ gap:14px; }
+  #certifications .cred-card li{ padding-left:16px; }
+  .cred-verify{
+    display:inline-flex; align-items:center; gap:4px; margin-top:5px;
+    font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.04em;
+    text-transform:uppercase; font-weight:600; color:var(--gold);
+    background:rgba(201,162,39,0.12); border:1px solid rgba(201,162,39,0.4);
+    text-decoration:none; padding:5px 11px; border-radius:2px;
+    transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .cred-verify:hover{ background:var(--gold); color:var(--navy-900); border-color:var(--gold); }
+  @media print{ .cred-verify{ display:none; } }
+
+    .lower-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:28px 60px;
+  }
+  @media (max-width:800px){ .lower-grid{ grid-template-columns:1fr; gap:24px; } }
+
+  .stamp-block{
+    border:1px dashed var(--gold); border-radius:6px; padding:24px 26px; background:var(--white);
+  }
+  @media (max-width:480px){ .stamp-block{ padding:20px 18px; } }
+  .stamp-block h3{
+    font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--navy-800); margin-bottom:14px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .stamp-block h3::before{ content:"◎"; color:var(--gold); font-size:1rem; }
+  .stamp-block p, .stamp-block li{
+    font-size:0.92rem; color:var(--navy-700);
+    text-align:justify; text-justify:inter-word;
+  }
+  .stamp-block ul{ list-style:none; display:flex; flex-direction:column; gap:8px; }
+  .stamp-block li{ padding-left:16px; position:relative; }
+  .stamp-block li::before{ content:"—"; position:absolute; left:0; color:var(--gold); }
+  .stamp-block .edu-list li{ line-height:1.35; }
+  .stamp-block .edu-meta{
+    font-size:0.83rem; line-height:1.35; color:var(--slate-500); margin-top:3px;
+  }
+
+    .contact-band{
+    background:linear-gradient(120deg, var(--navy-800), var(--navy-900));
+    color:var(--white); text-align:center; padding:80px 32px;
+    position:relative; overflow:hidden;
+  }
+  @media (max-width:480px){
+    .contact-band{ padding:56px 20px; }
+    .contact-link{ padding:11px 18px; font-size:0.82rem; }
+  }
+  .contact-band::before{
+    content:""; position:absolute; inset:0; opacity:0.1;
+    background-image:repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 1px, transparent 26px);
+    pointer-events:none;
+  }
+  .contact-band-inner{ position:relative; max-width:800px; margin:0 auto; }
+  .contact-band h2{ color:var(--white); font-size:clamp(1.6rem,3vw,2.2rem); margin-bottom:14px; }
+  .contact-band p{ color:#C7CDD6; margin-bottom:32px; font-size:1rem; }
+  .contact-links{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+  .contact-link{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid rgba(201,162,39,0.5); color:var(--white); text-decoration:none;
+    padding:12px 22px; border-radius:3px; font-size:0.9rem; font-weight:500;
+    font-family:var(--font-mono); transition:all 0.2s ease;
+  }
+  .contact-link:hover{ background:var(--gold); color:var(--navy-900); border-color:var(--gold); }
+  .contact-link.primary{ background:var(--gold); color:var(--navy-900); }
+  .contact-link.primary:hover{ background:var(--gold-bright); }
+
+  footer{
+    background:var(--navy-900); color:#8D99A8; text-align:center;
+    padding:22px 32px; font-size:0.78rem; font-family:var(--font-mono);
+    border-top:1px solid rgba(255,255,255,0.06);
+    line-height:1.7;
+  }
+  @media (max-width:480px){ footer{ font-size:0.66rem; padding:18px 16px; } }
+
+  @page{
+    size: A4;
+    margin: 14mm 12mm;
+  }
+
+  @media print{
+    html, body{
+      background:var(--paper) !important;
+      -webkit-print-color-adjust:exact !important;
+      print-color-adjust:exact !important;
+      color-adjust:exact !important;
+    }
+    *{
+      -webkit-print-color-adjust:exact !important;
+      print-color-adjust:exact !important;
+      color-adjust:exact !important;
+    }
+
+    .topbar, .contact-band, footer{ display:none !important; }
+
+    a{ text-decoration:none !important; color:inherit !important; }
+
+    .hero{ padding:16mm 0 10mm; }
+    .hero::before{ opacity:0.08; }
+    .hero-photo{ width:130px; height:130px; box-shadow:none; }
+    .hero-photo-wrap{ width:130px; }
+    .badge-ring{ display:none !important; }
+    .hero-summary{ font-size:0.85rem; }
+    .hero-meta-item .v{ font-size:0.82rem; }
+
+    section{ max-width:100%; padding:9mm 0; }
+    .section-head{ margin-bottom:16px; }
+    .divider{ max-width:100%; }
+
+        .job, .job-card, .cred-card, .stamp-block, .hero-inner, .contact-band-inner{
+      break-inside:avoid;
+      page-break-inside:avoid;
+    }
+    h1, h2, h3, .section-head{
+      break-after:avoid;
+      page-break-after:avoid;
+    }
+    .job-list li{ break-inside:avoid; }
+
+    .timeline::before{ background:var(--line) !important; }
+    .job-years::after{ background:var(--paper) !important; }
+
+    .job-card{ padding:14px 16px; border:1px solid var(--line); box-shadow:none; }
+    .job{ padding-bottom:20px; }
+    .job-list{ gap:5px; }
+    .job-list li{ font-size:0.82rem; line-height:1.5; }
+    .job-role-row{ font-size:1rem; }
+    .job-level{ font-size:0.8rem; }
+    .job-org{ font-size:0.72rem; }
+    .job-loc{ font-size:0.76rem; margin-bottom:16px; }
+
+    .credentials{ padding:9mm 0; }
+    .cred-grid{ gap:10px; grid-template-columns:repeat(2, 1fr) !important; }
+    .cred-card{ padding:14px 16px; border:1px solid var(--line); border-radius:4px; }
+    .cred-card h3{ font-size:0.68rem; margin-bottom:10px; }
+    .cred-card li{ font-size:0.72rem; }
+
+    .lower-grid{ gap:16px 20px; grid-template-columns:1fr 1fr; }
+    .stamp-block{ padding:14px 16px; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lino C. Ongngog",
+  "jobTitle": "Licensed Geodetic Engineer, Professional Land Surveyor, GIS Specialist",
+  "email": "mailto:linveyor@gmail.com",
+  "telephone": "+639660567000",
+  "url": "https://linveyor.github.io/about-me",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bani, Pangasinan",
+    "addressCountry": "PH"
+  },
+  "sameAs": [
+    "https://github.com/linveyor",
+    "https://www.linkedin.com/in/lino-ongngog-b9806a423/"
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-tagline">Excellence in Nature</div>
+    <nav class="topbar-nav" aria-label="Section navigation">
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+    </nav>
+    <a class="topbar-cta" href="#contact">Get in Touch</a>
+  </div>
+</div>
+
+<header class="hero" id="main">
+  <div class="hero-inner">
+    <div class="hero-photo-wrap">
+      <svg class="badge-ring" viewBox="0 0 272 272" aria-hidden="true">
+        <defs>
+          <path id="cvRingPath" d="M 136,136 m -122,0 a 122,122 0 1,1 244,0 a 122,122 0 1,1 -244,0"/>
+        </defs>
+        <circle class="badge-ring-circle" cx="136" cy="136" r="122"/>
+        <text class="badge-ring-text" font-family="ui-monospace,'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" textLength="766.5" lengthAdjust="spacing">
+          <textPath href="#cvRingPath" startOffset="0%">LICENSED GEODETIC ENGINEER &#8226; PROFESSIONAL LAND SURVEYOR &#8226; GIS SPECIALIST &#8226;&#160;</textPath>
+        </text>
+      </svg>
+      <img class="hero-photo" src="data:image/jpeg;base64,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" alt="Portrait of Lino C. Ongngog">
+    </div>
+    <div class="hero-text">
+      <span class="eyebrow">Curriculum Vitae</span>
+      <h1>Lino C. Ongngog</h1>
+      <div class="hero-title"><span>Licensed Geodetic Engineer</span><span class="sep">|</span><span>GIS Analyst &amp; Specialist</span><span class="sep">|</span><span>Professional Land Surveyor</span></div>
+      <p class="hero-summary">
+        Licensed Geodetic Engineer and Professional Land Surveyor based in the Philippines with 14 years of land surveying experience and 5 years of hands-on GIS practice. Demonstrated expertise in leading survey operations, supervising teams, integrating GIS solutions into geospatial workflows, resolving boundary-related issues, and ensuring compliance with applicable laws, regulations, and project requirements. Proven ability in stakeholder engagement, cross-functional coordination, and collaboration with clients, contractors, consultants, and government agencies to deliver accurate, timely, and reliable spatial data and survey outputs.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="k">Phone</span>
+          <span class="v"><a href="tel:+639660567000">+63 966 056 7000</a></span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="k">Email</span>
+          <span class="v"><a href="mailto:linveyor@gmail.com">linveyor@gmail.com</a></span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="k">Address</span>
+          <span class="v">Bani, Pangasinan, PH</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="k">GitHub</span>
+          <span class="v"><a href="https://github.com/linveyor" target="_blank" rel="noopener">github.com/linveyor</a></span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="k">LinkedIn</span>
+          <span class="v"><a href="https://www.linkedin.com/in/lino-ongngog-b9806a423/" target="_blank" rel="noopener">linkedin.com/in/lino-ongngog</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<section id="credentials" class="credentials">
+  <div class="section-head">
+    <span class="eyebrow">Capabilities Overview</span>
+    <h2>Core Competencies</h2>
+  </div>
+  <div class="cred-grid">
+    <div class="cred-card">
+      <h3>Surveying &amp; Geospatial Operations</h3>
+      <ul>
+        <li>Operation of GNSS, Total Station, TLS, and UAV systems</li>
+        <li>Execution of land and UAV surveys</li>
+        <li>Establishment of project control networks</li>
+      </ul>
+    </div>
+    <div class="cred-card">
+      <h3>GIS &amp; Spatial Data Management</h3>
+      <ul>
+        <li>Production of orthomosaics, DEMs, contours, and GIS‑ready datasets</li>
+        <li>Management of Spatial Data, Records, and Geodatabases</li>
+        <li>Development of GIS automation workflows using ArcGIS ModelBuilder and QGIS Graphical Modeler</li>
+      </ul>
+    </div>
+    <div class="cred-card">
+      <h3>Engineering Planning &amp; Compliance</h3>
+      <ul>
+        <li>Preparation of signed &amp; sealed survey plans</li>
+        <li>Submission of regulatory and compliance documentation</li>
+      </ul>
+    </div>
+    <div class="cred-card">
+      <h3>Leadership &amp; Project Management</h3>
+      <ul>
+        <li>Management of survey operations</li>
+        <li>Supervision and mentorship of survey teams</li>
+        <li>Engagement with stakeholders and resolution of land disputes</li>
+        <li>Preparation of weekly reports and technical presentations</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-head" id="skills" style="margin-top:36px;">
+    <span class="eyebrow">Tools &amp; Proficiencies</span>
+    <h2>Technical Skills</h2>
+  </div>
+  <div class="cred-grid">
+    <div class="cred-card">
+      <h3>Survey &amp; Geospatial Software</h3>
+      <ul>
+        <li>AutoCAD Civil 3D, ArcGIS Pro, QGIS, Global Mapper, GeoLibre, DJI Terra, PIX4DMapper</li>
+      </ul>
+    </div>
+    <div class="cred-card">
+      <h3>Database &amp; Programming</h3>
+      <ul>
+        <li>PostgreSQL/PostGIS spatial databases</li>
+        <li>Python (GIS automation) – Currently upskilling / Self‑paced</li>
+        <li>Web Development – Currently upskilling / Self‑paced</li>
+      </ul>
+    </div>
+    <div class="cred-card">
+      <h3>Office &amp; Productivity Tools</h3>
+      <ul>
+        <li>Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="credentials">
+  <div class="section-head">
+    <span class="eyebrow">Verified Credentials</span>
+    <h2>Licenses &amp; Certifications</h2>
+  </div>
+  <div class="cred-grid">
+    <div class="cred-card">
+      <h3>Professional Licenses</h3>
+      <ul>
+        <li>Licensed Geodetic Engineer — Philippines Professional Regulation Commission, Reg. No. 9125<br>
+          <a class="cred-verify" href="https://verification.prc.gov.ph/" target="_blank" rel="noopener">Verify License →</a>
+        </li>
+        <li>Licensed Real Estate Broker — Philippines Professional Regulation Commission, Reg. No. 29838<br>
+          <a class="cred-verify" href="https://verification.prc.gov.ph/" target="_blank" rel="noopener">Verify License →</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cred-card">
+      <h3>Certifications</h3>
+      <ul>
+        <li>GIS, Mapping, and Spatial Analysis Specialization — University of Toronto (60 hours)<br>
+          <a class="cred-verify" href="https://www.coursera.org/verify/specialization/BVQUNAA3TUZN" target="_blank" rel="noopener">Verify Certificate →</a>
+        </li>
+        <li>Geographic Information Systems (GIS) Specialization — University of California, Davis (76 hours)<br>
+          <a class="cred-verify" href="https://www.coursera.org/verify/specialization/E0GVOTISJB5X" target="_blank" rel="noopener">Verify Certificate →</a>
+        </li>
+        <li>Autodesk InfraWorks — Maximum Solutions Corp. (8 hours)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-head">
+    <span class="eyebrow">Professional Record</span>
+    <h2>Work Experience</h2>
+  </div>
+
+  <div class="timeline">
+
+    <div class="job">
+      <div class="job-years">2019–2026</div>
+      <div class="job-card">
+        <div class="job-role-row"><span class="job-title">Geodetic Engineer</span><span class="job-level">(Senior Supervisory Role – Dev't &amp; Planning Center)</span></div>
+        <div class="job-org">BB International Leisure &amp; Resort Development Corp.</div>
+        <div class="job-loc">Clark, Pampanga, PH</div>
+        <div class="job-highlights"><span class="hl-label">Project Highlights</span><div class="hl-tags"><span class="hl-tag">Midori Highlands Eco‑Township (101 ha) – Clark, Pampanga</span><span class="hl-tag">MIREJ Hotel (3,521 sqm, 9-storeys) – Clark, Pampanga</span><span class="hl-tag">Sunmoon Pavilion (1,476 sqm, single storey) – Clark, Pampanga</span><span class="hl-tag">Midori Clark Rooftop Solar Power (6,172 sqm) – Clark, Pampanga</span></div></div>
+        <ul class="job-list">
+          <li>Led survey operations—including relocation, verification, topographic, as‑built, and construction surveys—for land development projects such as Midori Highlands Eco‑Township, vertical construction projects including MIREJ Hotel and Sunmoon Pavilion, and renewable energy projects such as Midori Clark Rooftop Solar Power, ensuring strict compliance with design standards and delivering accurate datasets that reduced rework and supported timely project completion.</li>
+          <li>Directed UAV photogrammetric surveys for land development monitoring and prospective solar project sites, generating orthomosaics, DEMs, contours, and GIS‑ready datasets that enhanced spatial analysis and guided planning.</li>
+          <li>Initiated GIS adoption by securing management approval, establishing workflows with industry‑standard GIS and spatial database tools, and maintaining geospatial datasets as GIS custodian.</li>
+          <li>Resolved boundary dispute between BB International Leisure &amp; Development Corporation and nearby Aeta communities by negotiating with Clark Development Corporation (CDC) as implementing authority and Aeta leaders, safeguarding company land assets and strengthening stakeholder relations.</li>
+          <li>Presented survey outputs and technical documentation to executives, supporting informed decision‑making and providing technical support to planning, design, and construction teams, thereby enhancing stakeholder coordination within the company.</li>
+          <li>Mentored junior surveyors and technical staff, developing capabilities and improving proficiency. </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-years">2018–2019</div>
+      <div class="job-card">
+        <div class="job-role-row"><span class="job-title">Survey Engineer</span><span class="job-level">(Supervisory Role – Line and Grade Department)</span></div>
+        <div class="job-org">Megawide Construction Corp.</div>
+        <div class="job-loc">San Juan City, Metro Manila, PH</div>
+        <div class="job-highlights"><span class="hl-label">Project Highlights</span><div class="hl-tags"><span class="hl-tag">New Clark International Airport — Terminal 2 – Clark, Pampanga</span></div></div>
+        <ul class="job-list">
+          <li>Conducted detailed topographic and stakeout surveys for Clark International Airport Terminal 2 using RTK GNSS, ensuring precise ground control and elevation data.</li>
+          <li>Executed UAV photogrammetric and terrestrial scanning surveys for construction progress monitoring, volume computation, and as‑built documentation, ensuring accuracy in construction records.</li>
+          <li>Processed RINEX data and aerial imagery into topographic plans, orthomosaics, and DEMs using online AUSPOS, DJI Terra &amp; QGIS, streamlining documentation and ensuring reliable elevation verification.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-years">2015–2018</div>
+      <div class="job-card">
+        <div class="job-role-row"><span class="job-title">Geodetic Engineer</span><span class="job-level">(In‑house Supervisory Role – Engineering Department)</span></div>
+        <div class="job-org">Homemark, Inc.</div>
+        <div class="job-loc">Quezon City, Metro Manila, PH</div>
+        <div class="job-highlights"><span class="hl-label">Project Highlights</span><div class="hl-tags"><span class="hl-tag">Casa Amaya South (7.28 ha) – Tanza, Cavite</span><span class="hl-tag">Greengate 3 Extension (4.76 ha) – Imus, Cavite</span><span class="hl-tag">Gentree Villas (14.83 ha) – General Trias, Cavite</span><span class="hl-tag">Northgate 1 (2.23 ha) – Tanza, Cavite</span><span class="hl-tag">Nueva Estancia (3.03 ha) – General Trias, Cavite</span></div></div>
+        <ul class="job-list">
+          <li>Executed relocation, topographic, resurvey, and subdivision surveys for residential housing developments, delivering datasets that supported land development design and planning.</li>
+          <li>Prepared, signed, and sealed subdivision plans in Cavite using professional license, securing LMS‑DENR Region 4A approval for regulatory compliance.</li>
+          <li>Prepared zoning maps and certified location plans for LGU and HLURB permit applications, facilitating regulatory approvals using industry‑standard CAD software.</li>
+          <li>Processed survey data into detailed topographic plans and established control points for subdivision layouts, drainage, and utilities, ensuring engineering accuracy.</li>
+          <li>Supervised stakeout activities, resolved boundary disputes, and mentored junior surveyors, safeguarding project timelines and strengthening team capability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-years">2014–2015</div>
+      <div class="job-card">
+        <div class="job-role-row"><span class="job-title">Geodetic Engineer</span><span class="job-level">(Project‑Based – Cadastral &amp; Construction Surveys)</span></div>
+        <div class="job-org">EGB &amp; Associates Corp.</div>
+        <div class="job-loc">Taguig City, Metro Manila, PH</div>
+        <div class="job-highlights"><span class="hl-label">Project Highlights</span><div class="hl-tags"><span class="hl-tag">Cadastral Survey – Category B (5,749 ha) – Dumaguete City, Negros Oriental</span><span class="hl-tag">Jalaur River Multipurpose Dam (approx. 500 ha) – Calinog, Iloilo</span></div></div>
+        <ul class="job-list">
+          <li>Conducted cadastral survey operations in Dumaguete City, establishing boundary monuments, performing static GNSS observations, and processing data for LMS‑DENR approval.</li>
+          <li>Executed topographic surveys for the Jalaur River Multipurpose Dam project in Calinog, Iloilo, delivering datasets that supported feasibility studies, engineering planning, and design.</li>
+          <li>Performed construction surveys and prepared CAAP height clearance documentation for cell site tower projects, ensuring precise positioning and compliance with aviation standards.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-years">2012–2014</div>
+      <div class="job-card">
+        <div class="job-role-row"><span class="job-title">Project Surveyor</span><span class="job-level">(Project‑Based – Construction Surveys)</span></div>
+        <div class="job-org">AIP Construction</div>
+        <div class="job-loc">Baguio City, Benguet, PH</div>
+        <div class="job-highlights"><span class="hl-label">Project Highlights</span><div class="hl-tags"><span class="hl-tag">Aluling–Cervantes Bridge Construction (180 m span) – Cervantes, Ilocos Sur</span></div></div>
+        <ul class="job-list">
+          <li>Executed construction surveys for the Aluling Bridge government infrastructure project, including verification, topographic surveys, staking, and as‑built documentation.</li>
+          <li>Established survey control network using Sokkia Total Station and conventional methods, ensuring accuracy and consistency across bridge and road construction phases.</li>
+          <li>Provided survey data and staking support for road widening and concreting works, guiding construction activities and ensuring quality project delivery.</li>
+          <li>Collaborated with engineers to resolve technical issues, maintaining compliance with design specifications and minimizing costly rework.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-years">2011</div>
+      <div class="job-card">
+        <div class="job-role-row"><span class="job-title">Land Surveyor</span><span class="job-level">(Entry‑Level Role – Cadastral Surveys)</span></div>
+        <div class="job-org">Tri‑Axis Surveying Services</div>
+        <div class="job-loc">Baguio City, Benguet, PH</div>
+        <div class="job-highlights"><span class="hl-label">Project Highlights</span><div class="hl-tags"><span class="hl-tag">Cadastral Survey – Category A (138 ha) – Baguio City, Benguet</span></div></div>
+        <ul class="job-list">
+          <li>Served as Instrument Man on cadastral surveys, ensuring compliance with DENR technical standards.</li>
+          <li>Assisted the Chief Surveyor in processing survey data and preparing cadastral maps for LMS‑DENR submission and approval.</li>
+          <li>Drafted individual lot plans for claimants, facilitating land titling processes and accurate documentation.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="education">
+  <div class="section-head">
+    <span class="eyebrow">Credentials &amp; Affiliations</span>
+    <h2>Education and Affiliations</h2>
+  </div>
+  <div class="lower-grid">
+    <div>
+      <div class="stamp-block">
+        <h3>Affiliations</h3>
+        <ul>
+          <li>Geodetic Engineers of the Philippines (GEP, Inc.)</li>
+          <li>Philippine Real Estate Service Practitioners, Inc. (PhilRES, Inc.)</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="stamp-block">
+        <h3>Education</h3>
+        <ul class="edu-list">
+          <li>Bachelor of Science in Geodetic Engineering
+            <div class="edu-meta">Mountain Province State University (MPSU) · Tadian, Mountain Province, PH · 2009</div>
+          </li>
+          <li>Real Estate Broker Licensing Course
+            <div class="edu-meta">National Real Estate Association, Inc. · Baguio City, Benguet, PH · 2014</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="stamp-block">
+        <h3>References</h3>
+        <p>Available upon request.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="contact" class="contact-band">
+  <div class="contact-band-inner">
+    <h2>Let's work together</h2>
+    <p>Open to senior surveying and GIS Specialist or analyst roles. Available for remote work, as well as local or international relocation.</p>
+    <div class="contact-links">
+      <a class="contact-link primary" href="mailto:linveyor@gmail.com">✉ linveyor@gmail.com</a>
+      <a class="contact-link" href="tel:+639660567000">☎ +63 966 056 7000</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/lino-ongngog-b9806a423/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="contact-link" href="https://github.com/linveyor" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  LINO C. ONGNGOG — LICENSED GEODETIC ENGINEER · PRC REG. NO. 9125 · LICENSED REAL ESTATE BROKER · PRC REG. NO. 29838 · BANI, PANGASINAN, PHILIPPINES
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var targetId = this.getAttribute('href').slice(1);
+      if (!targetId) return;
+      var target = document.getElementById(targetId);
+      if (!target) return;
+      e.preventDefault();
+      var topbar = document.querySelector('.topbar');
+      var offset = (topbar ? topbar.getBoundingClientRect().height : 0) + 12;
+      var targetTop = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: Math.max(targetTop, 0), behavior: 'smooth' });
+    }, { passive: false });
+  });
+</script>
+
+</body>
+</html>
